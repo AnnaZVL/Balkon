@@ -549,9 +549,9 @@ body {
     position: absolute;
     left: 0;
     bottom: -5px;
-    height: 2px;
+    height: 3px;
     width: 0;
-    background-color: var(--color-white);
+    background-color: var(--color-blue);
     transition: width 0.3s ease-in-out;
 }
 
