@@ -7,6 +7,17 @@ const $heroSwiper = new Swiper('.hero__swiper', {
     
   });
 
+  // Слайдер секции Галерея
+const $gallerySwiper = new Swiper('.gallery__slider', {   
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.gallery__btn--next',
+    prevEl: '.gallery__btn--prev',
+  },  
+});
+
 // Аккордеон секции FAQ
 const $accItemAll = document.querySelectorAll('.services-card');
 
