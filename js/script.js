@@ -7,16 +7,45 @@ const $heroSwiper = new Swiper('.hero__swiper', {
     
   });
 
-  // Слайдер секции Галерея
-const $gallerySwiper = new Swiper('.gallery__slider', {   
+  // Слайдер секции Галерея Var1
+const $gallerySwiper = new Swiper('.gallery1__slider', {   
   loop: true,
   slidesPerView: 1,
   spaceBetween: 30,
   navigation: {
-    nextEl: '.gallery__btn--next',
-    prevEl: '.gallery__btn--prev',
+    nextEl: '.gallery1__btn--next',
+    prevEl: '.gallery1__btn--prev',
   },  
 });
+
+// Слайдер секции Галерея Var2
+var $gallery2Swiper = new Swiper(".gallery2__slider", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 50,
+    depth: 200,
+    modifier: 2,
+    slideShadows: false
+  },
+  loop: true,
+  keyboard: {
+    enabled: true
+  },
+  mousewheel: {
+    thresholdDelta: 70
+  },
+  breakpoints: {
+    560: {
+      slidesPerView: 1
+    },    
+    1024: {
+      slidesPerView: 2
+    }
+  }
+})
 
 // Аккордеон секции FAQ
 const $accItemAll = document.querySelectorAll('.services-card');
@@ -51,14 +80,14 @@ function closeAcc(count) {
 
 // Модальное окно
 // Открытие модального окна
-const $btnOpenModal = document.querySelectorAll('.hero__btn'),
+const $btnOpenModalAll = document.querySelectorAll('.open-modal'),
     $modal = document.getElementById('modal'),
     $btnCloseModal = document.getElementById('modalClose'),
     $form = document.getElementById('modal-form');
 
 
-$btnOpenModal.forEach(elem => {
-  elem.addEventListener('click', () => {
+$btnOpenModalAll.forEach(btn => {
+  btn.addEventListener('click', () => {
     $modal.classList.add('visible');
     document.body.classList.add('scroll-stop');
 });
