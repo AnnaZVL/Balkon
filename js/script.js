@@ -18,34 +18,49 @@ const $gallerySwiper = new Swiper('.gallery1__slider', {
   },  
 });
 
-// Слайдер секции Галерея Var2
-var $gallery2Swiper = new Swiper(".gallery2__slider", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 50,
-    depth: 200,
-    modifier: 2,
-    slideShadows: false
-  },
-  loop: true,
-  keyboard: {
-    enabled: true
-  },
-  mousewheel: {
-    thresholdDelta: 70
-  },
-  breakpoints: {
-    560: {
-      slidesPerView: 1
-    },    
-    1024: {
-      slidesPerView: 2
-    }
-  }
-})
+// // Слайдер секции Галерея Var2
+// var $gallery2Swiper = new Swiper(".gallery2__slider", {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 50,
+//     depth: 200,
+//     modifier: 2,
+//     slideShadows: false
+//   },
+//   loop: true,
+//   keyboard: {
+//     enabled: true
+//   },
+//   mousewheel: {
+//     thresholdDelta: 70
+//   },
+//   breakpoints: {
+//     560: {
+//       slidesPerView: 1
+//     },    
+//     1024: {
+//       slidesPerView: 2
+//     }
+//   }
+// })
+
+ const $gallery2Swiper = new Swiper(".gallery2__slider", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      },
+      
+    });
 
 // Аккордеон секции FAQ
 const $accItemAll = document.querySelectorAll('.services-card');
